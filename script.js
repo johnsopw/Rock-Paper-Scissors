@@ -6,30 +6,32 @@ function computerPlay() {
     }
   
 function playRound(playerSelection, computerSelection){
+  playerSelection = prompt("Choose your weapon. Rock, paper, or scissors!");
+  computerSelection = computerPlay();
   switch (playerSelection) {
-    case 'rock':
-      if (computerSelection === 'paper') {
+    case "rock":
+      if (computerSelection === "paper") {
         return "Tough break! Paper covers rock!";
-      } else if (computerSelection === 'scissors') {
+      } else if (computerSelection === "scissors") {
         return "Nice! Bash those scissors!";
       }
       break;
-    case 'paper':
+    case "paper":
       if (computerSelection==="rock") {
         return "Well done! Paper covers rock like a Christmas present!";
       } else if (computerSelection === "scissors") {
         return "Well this isn't good. Scissors dice up your paper!";
       }
       break;
-    case scissors:
-      if (playerSelection === 'paper') {
+    case "scissors":
+      if (playerSelection === "paper") {
         return "Oh yeah! Scissors slice up some paper!";
-      } else if (playerSelection === 'rock') {
+      } else if (playerSelection === "rock") {
         return "Uh oh! Rock smashes Scissors";
       }
       break;
     default: {
-      return "Ah shucks. Looks like this time it was a draw"
+      return alert("Ah shucks. You done input the wrong weapon. Try it again. Rock, Paper, or Scissors?");
     }
   }
 }
