@@ -42,6 +42,14 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
+function game() {
+let i;
+for (i=0; i<5; i++){
+  playRound();
+} ;
+}
+
+
 /*  function playRound(computerSelection, playerSelection) {
       playerSelection = playerSelection.toLowerCase();
       
