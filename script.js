@@ -8,12 +8,14 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection){
   playerSelection = prompt("Choose your weapon. Rock, paper, or scissors!");
   computerSelection = computerPlay();
-  switch (playerSelection) {
+  switch (playerSelection.toLowerCase()) {
     case "rock":
       if (computerSelection === "paper") {
         return "Tough break! Paper covers rock!";
       } else if (computerSelection === "scissors") {
         return "Nice! Bash those scissors!";
+      } else {
+        return "It's a draw this time. You got lucky!";
       }
       break;
     case "paper":
@@ -21,6 +23,8 @@ function playRound(playerSelection, computerSelection){
         return "Well done! Paper covers rock like a Christmas present!";
       } else if (computerSelection === "scissors") {
         return "Well this isn't good. Scissors dice up your paper!";
+      } else {
+        return "It's a draw this time. You got lucky!";
       }
       break;
     case "scissors":
@@ -28,6 +32,8 @@ function playRound(playerSelection, computerSelection){
         return "Oh yeah! Scissors slice up some paper!";
       } else if (playerSelection === "rock") {
         return "Uh oh! Rock smashes Scissors";
+      } else {
+        return "It's a draw this time. You got lucky!";
       }
       break;
     default: {
